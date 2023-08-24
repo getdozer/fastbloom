@@ -109,6 +109,7 @@ impl BloomBitVec {
 /// counter vector for counting bloom filter.
 #[derive(Debug)]
 #[derive(Clone)]
+#[cfg_attr(feature = "serde", derive(serde::Serialize, serde::Deserialize))]
 pub(crate) struct CountingVec {
     /// Internal representation of the vector
     pub(crate) storage: Vec<usize>,

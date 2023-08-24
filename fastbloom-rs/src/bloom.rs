@@ -393,6 +393,7 @@ impl BloomFilter {
 /// Algorithms, LNCS 4168, 2006
 #[derive(Clone)]
 #[derive(Debug)]
+#[cfg_attr(feature = "serde", derive(serde::Serialize, serde::Deserialize))]
 pub struct CountingBloomFilter {
     config: FilterBuilder,
     counting_vec: CountingVec,
